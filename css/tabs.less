@@ -1,0 +1,57 @@
+
+.tabs {
+    width: 90%;
+    margin: auto;
+    margin-top: 2%;
+    a:hover {
+	text-decoration: none;
+    }
+    ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	padding: 10px 10px 8px 30%;
+    }
+    li {
+	display: inline;
+    }
+    a {
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	padding: 10px;
+	padding-top: 10px;
+	&:hover {
+	    background: #ccc;
+	    color: white;
+	    .icon {
+		display: none;
+	    }
+	    .white {
+		display: inline;
+	    }
+	}
+	img {
+	    width: 15px;
+	}
+	.white {
+	    display: none;
+	}
+    }
+    .active {
+	border: 1px solid #ccc;
+	border-bottom: white;
+	background-color: white;
+	cursor: default;
+	&:hover {
+	    background: white;
+	    color: #999;
+	    .icon {
+		display: inline;
+	    }
+	    .white {
+		display: none;
+	    }
+	}
+    }
+}
+

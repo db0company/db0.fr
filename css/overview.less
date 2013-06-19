@@ -1,0 +1,50 @@
+
+#overview, #projects {
+    padding: 5%;
+
+    #messages {
+	.well {
+	    @color: crimson;
+	    @dark: darken(@color, 10%);
+	    background-color: @color;
+	    border: @dark 3px solid;
+	    margin-top: 20px;
+	    img {
+		display: block;
+		margin: auto;
+		margin-bottom: 10px;
+		height: 26px;
+	    }
+	    h4 {
+		padding: 0;
+		margin: 0;
+		color: white;
+		text-shadow: 2px 2px @dark;
+		text-align: center;
+	    }
+	    p {
+		color: white;
+		font-size: 0.8em;
+		text-align: center;
+	    }
+	}
+	.green, #art {
+	    @color: forestgreen;
+	    @dark: darken(@color, 10%);
+	    background-color: @color;
+	    border-color: @dark;
+	    h4 {
+		text-shadow: 2px 2px @dark;
+	    }
+	}
+	.blue, #dev {
+	    @color: royalblue;
+	    @dark: darken(@color, 10%);
+	    background-color: @color;
+	    border-color: @dark;
+	    h4 {
+		text-shadow: 2px 2px @dark;
+	    }
+	}
+    }
+}
