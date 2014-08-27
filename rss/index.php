@@ -1,6 +1,7 @@
 <?php
 
-include('../include/feeds.php');
+include_once('../include/feeds.php');
+include_once('../include/tools.php');
 
 function        xmltoarray($xml) {
   return json_decode(json_encode((array)simplexml_load_string($xml)), 1);
@@ -15,8 +16,27 @@ function	feedsIdTofeed($ids) {
   return $result_feeds;
 }
 
-function	getFeed($url, $max = null) {
-  $rss = file_get_contents($url);
+function	getCache($id) {
+  $timeout = 24 * 60 * 60;
+  $filename = 'cache/'.$id;
+  if (file_exists($filename)
+      && (!$check_time || (time() - filemtime($filename)) < $timeout)) {
+    $cache = @file_get_contents($filename);
+    return $cache;
+  }
+  return false;
+}
+
+function	updateCache($id, $content) {
+  $filename = 'cache/'.$id;
+  @file_put_contents($filename, $content);
+}
+
+function	getFeed($id, $url, $max = null) {
+  if (($rss = getCache($id)) === false) {
+    $rss = @file_get_contents($url);
+    updateCache($id, $rss);
+  }
   $rss = str_replace('&raquo;', '', $rss); // fix for github
   $rss = preg_replace('/\<title\>\<\!\[CDATA\[([^\]]+)\]\]\>\<\/title\>/i', '<title>$1</title>', $rss); // fix for google+
   $feed = xmltoarray($rss);
@@ -26,7 +46,7 @@ function	getFeed($url, $max = null) {
   return $feed;
 }
 
-function getRandomFavicon($png = false) {
+function getRandomFaviconRSS($png = false) {
   $path = '../img/favicon/';
   $pic = array_diff(glob($path.($png ? '*.png' : '*.ico')),
 		    array('.', '..'));
@@ -43,7 +63,7 @@ function    feedsToArrays($feedsids, $max = null) {
   $feeds_arrays = feedsIdTofeed($feedsids);
   $final_feed = array();
   foreach ($feeds_arrays as $id => $feed_info) {
-    $feed = getFeed($feed_info['url']);
+    $feed = getFeed($id, $feed_info['url']);
     $feed_info['id'] = $id;
     foreach ($feed as $item) {
       $final_feed[] = array('feed' => $feed_info,
@@ -77,10 +97,9 @@ function	arrayToXML($a) {
   }
 }
 
-function	feedsToHTML($feedsids, $max = null) {
-  $feed = feedsToArrays($feedsids, $max);
-  foreach ($feed as $id => $item) { ?>
-    <div class="feed_item well <?= $item['feed']['id'] ?>" id="<?= $item['feed']['id'] ?><?= $id ?>"
+function	HTMLitem($item) {
+?>
+    <div class="feed_item well <?= $item['feed']['id'] ?>" id="<?= $item['feed']['id'] ?><?= $item['item']['id'] ?>"
 	 style="border-color: <?= $item['feed']['color'] ?>">
       <div class="row-fluid">
 	<div class="span1">
@@ -112,6 +131,19 @@ if (is_array($item['item']['description'])) { ?>
     </div> <!-- feed_item -->
     </a>
 <?php
+	    }
+
+function	feedsToHTML($feedsids, $max = null, $format) {
+  $feed = feedsToArrays($feedsids, $max);
+  foreach ($feed as $id => $item) {
+    $item['item']['id'] = $id;
+  }
+  if ($format == 'html_grid')
+    makeGrid(2, $feed, HTMLitem);
+  else {
+    foreach ($feed as $item) {
+      HTMLitem($item);
+    }
   }
 }
 
@@ -122,12 +154,12 @@ function	returnRSSNews($feedsids) {
   $RSSfeed->setTitle('db0.fr custom feed');
   $RSSfeed->setLink('http://db0.fr/news');
   $RSSfeed->setDescription('Get all the updates you\'re interested in about db0 with your custom feed');
-  $RSSfeed->setImage('db0', 'http://db0.fr/', 'http://db0.fr/'.getRandomFavicon(true));
+  $RSSfeed->setImage('db0', 'http://db0.fr/', 'http://db0.fr/'.getRandomFaviconRSS(true));
 
   $feed = feedsToArrays($feedsids);
   foreach ($feed as $id => $item) {
     $RSSitem = $RSSfeed->createNewItem();
-    $RSSitem->setTitle('['.$item['feed']['title'].'] '.$item['item']['title']);
+    $RSSitem->setTitle('['.$item['feed']['name'].'] '.$item['item']['title']);
     $RSSitem->setLink($item['item']['link']);
     $RSSitem->setDate($item['item']['pubDate']);
     $RSSitem->setDescription($item['item']['description']);
@@ -136,14 +168,16 @@ function	returnRSSNews($feedsids) {
   $RSSfeed->generateFeed();
 }
 
-function	returnHTMLNews($feedsids) {
-  feedsToHTML($feedsids);
+function	returnHTMLNews($feedsids, $type) {
+  feedsToHTML($feedsids, null, $type);
 }
 
 if (isset($_GET['feed'])) {
   $feedsids = explode(',', $_GET['feed']);
-  if (isset($_GET['type']) && $_GET['type'] == 'html')
-    returnHTMLNews($feedsids);
+  if (isset($_GET['type'])
+      && ($_GET['type'] == 'html'
+	  || $_GET['type'] == 'html_grid'))
+    returnHTMLNews($feedsids, $_GET['type']);
   else
     returnRSSNews($feedsids);
  }

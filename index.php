@@ -1,11 +1,11 @@
 <?php
 
-$_GET['prod'] = false;
+$_GET['prod'] = true;
 
 $url = $_SERVER["SERVER_NAME"];
 $nick = 'db0';
-$name = 'Barbara Lepage';
-$detail = 'Deby';
+$name = 'Deby Barbara Lepage';
+$detail = 'division by zero';
 $title = $nick.' | '.$name.' | '.$url;
 $email = 'db0company@gmail.com';
 
@@ -16,10 +16,12 @@ $menu =
 			    'label' => 'News'),
 	'realtime' => array('icon' => 'clock',
 			    'label' => 'In Real Time'),
-	'projects' => array('icon' => 'playing_dices',
-			    'label' => 'Projects'),
+	// 'projects' => array('icon' => 'playing_dices',
+	// 		    'label' => 'Projects'),
 	'resume' => array('icon' => 'nameplate',
 			  'label' => 'Résumé'),
+	'portfolio' => array('icon' => 'picture',
+			  'label' => 'Portfolio'),
 	'contact' => array('icon' => 'e-mail',
 			   'label' => 'Contact'),
 	);

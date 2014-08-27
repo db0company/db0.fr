@@ -1,461 +1,362 @@
 
 <div id="resume">
-  <h3 id="presentation">PRESENTATION/OBJECTIVES</h3>
-  <p>
-    Tons of ideas come out of my head and my goal in life is to achieve them all.
-    I create teams to develop them and publish them. Managing projects is my passion.
-    Let me manage yours and develop my ideas, you will not be disappointed!
-    I'm currently searching for a part-time remote job.
-  </p>
-  
-  <h3 id="education">EDUCATION</h3>
-  <table>
-    <tr>
-      <td style="border-right: 1px solid #DDD; width: 50%;">
-	<h5>Attended schools</h5>
-	<ul>
-	  <li>
-	    <div class="details" onClick="show('epitech'); return(false);">
-	      details
-	    </div>
-	    <p>
-	      <b>EPITECH</b>, 4th year (2009–2014, current)
-	    </p>
-	    <div class="dview" id="epitech">
-	      <a href="http://epitech.eu/" target="_blank">
-		<img src="img/resume/logo_epitech.png" alt="Epitech" />
-	      </a>
-	      <br />
-	      EPITECH, the European Institute of Technology, is a private institution of
-	      higher education in general computer science.
-	      <ul>
-		<li>
-		  <a href="http://public.db0.fr/Documents/carteetudiant.jpg" target="_blank">
-		    My student card</a>
-		</li>
-		<li>
-		  <a href="http://epitech.db0.fr/" target="_blank">
-		    My work at school</a>
-		</li>
-	      </ul>
-	    </div>
-	  </li>
-	  <li>
-	    <div class="details" onClick="show('csulb'); return(false);">
-	      details
-	    </div>
-	    <p>
-	      <b>California State University Long Beach</b>,
-	      Spring semester (2013)
-	    </p>
-	    <div class="dview" id="csulb">
-	      <a href="http://csulb.edu/" target="_blank">
-		<img src="img/resume/logo_csulb.png" alt="CSULB" />
-	      </a>
-	      <br />
-	      CSULB is the second largest campus of the California State University (CSU)
-	      and one of the largest in the state of California.
-	    </div>
-	  </li>
-	  <li>
-	    <div class="details" onClick="show('ucberkeley'); return(false);">
-	      details
-	    </div>
-	    <p>
-	      <b>Berkeley University Of California</b>,
-	      Summer Session (2013)
-	    </p>
-	    <div class="dview" id="ucberkeley">
-	      <a href="http://berkeley.edu/" target="_blank">
-		<img src="img/resume/logo_berkeley.png" alt="BERKELEY" />
-	      </a>
-	      <br />
-	      UC Berkeley is the oldest of the ten major campuses affiliated with the University of California.
-	    </div>
-	  </li>
-	</ul>
-      </td>
-      <td>
-	<h5>Diplomas</h5>
-	<ul>
-	  <li>
-	    <div class="details" onClick="show('bac'); return(false);">
-	      details</div>
-	    <p>
-	      Scientific “Baccalaur&eacute;at”,<br />
-	      Mathematics option (2009)</p>
-	    <div class="dview" id="bac" style="width: 200px;">
-	      <ul>
-		<li>
-		  <b>High School:</b>
-		  <br />
-		  <a href="http://www.ac-nice.fr/apollinaire/" target="_blank">
-		    Guillaume Apollinaire</a>,
-		  <a href="http://goo.gl/maps/YIVH">
-		    Nice, France</a>
-		</li>
-	      </ul>
-	    </div>
-	  </li>
-	  <li>
-	    EPITECH University (Paris, France)<br />
-	    <b>Bachelor of Computer Science (2012)</b>
-	    <div class="details more" onClick="show('more_education'); return(false);">
-	      more</div>
-	    <div class="dview" id="more_education">
-	      “Brevet des coll&egrave;ge”, Mention “Bien” (2006)<br />
-	      College: <a href="http://www.ac-nice.fr/jhfabre/" target="_blank">
-		Jean-Henri Fabre</a>,
-	      <a href="http://goo.gl/maps/32D8" target="_blank">
-		Nice</a>
-	    </div>
-	  </li>
-	</ul>
-      </td>
-      <!--		<td>
-			<ul>
-			  <h6>Goals</h6>
-			  <li>
-			    EPITECH University (Paris, France)<br />
-			    <b>Master of Information Technology in Software Engineering (2014)</b>
-			  </li>
-			</ul>
-      </td>
-      -->
-    </tr>
-  </table>
-  <h3 id="skills">SKILLS</h3>
-  <table>
-    <tr style="border-bottom: 1px solid #DDD;">
-      <td>
-	<h5 id="programming-langages">PROGRAMMING LANGAGES</h5>
-	<ul>
-	  <li>
-	    <p>
-	      <b>Software</b>
-	      <br />
-	      C, x86 Assembly, C++, Perl (GTK), OCaml</p>
-	  </li>
-	  <li>
-	    <p>
-	      <b>Scripting, Markup</b>
-	      <br />
-	      Bash, Perl, PHP, ASS, LaTeX, JSON, XML</p>
-	  </li>
-	  <li>
-	    <p>
-	      <b>Web</b>
-	      <br />
-	      PHP5, XHTML5, CSS3, LESS, OCaml (Ocsigen), MySQL, PostgreSQL, Node.JS, Javascript, JQuery</p>
-	  </li>
-	</ul>
-      </td>
-      <td style="padding-bottom: 10px;">
-	<h5 id="operating-systems">OPERATING SYSTEMS</h5>
-	<ul>
-	  <li>
-	    <b>Linux</b>
-	    (Ubuntu, Ubuntu Server, Debian, Fedora)</li>
-	    <b>Unix</b>
-	    (FreeBSD)<br />
-	  <li>
-	    Windows, Mac OSX</li>
-	</ul>
-	<h5 id="software">SOFTWARE</h5>
-	<ul>
-	  <!--	      <li>
-		      <p>
-			<b>Editor, IDE</b>
-			<br />
-			Unix, Linux : Emacs, Vim<br />
-			Windows : Visual Studio</p>
-	  </li>
-	  -->
-	  <li>
-	    <b>SCM</b>
-	    <br />
-	    Git, SVN, Mercurial, Darcs</li>
-	  <li>
-	    <b>System Administration</b>
-	    <br />
-	    Nagios, VirtualBox, Apache, NGinX</li>
-	</ul>
-      </td>
-    </tr>
-    <tr>
-      <td>
-	<h5 id="languages">LANGUAGES</h5>
-	<ul>
-	  <li>
-	    <img src="http://icons.db0.fr/f/french.png" alt="French">
-	    <b>French</b>
-	    - Native Language</li>
-	  <li>
-	    <img src="http://icons.db0.fr/f/english.png" alt="English">
-	    <b>English</b>
-	    - Fluent<ul>
-	      <li>TOEIC : 755,</li>
-	      <li>TOEFL : 81,</li>
-	      <li>CSULB American Language Institute Certificate</li>
-	    </ul>
-	  </li>
-	</ul>
-      </td>
-      <td>
-	<h5 id="various-skills">VARIOUS</h5>
-	<ul>
-	  <li>Personal Organization</li>
-	  <li>Team Leadership</li>
-	  <li>Agile Project Management</li>
-	  <li>Various Events Organization</li>
-	  <li>Budget Management</li>
-	  <li>Teaching, coaching</li>
-	</ul>
-      </td>
-    </tr>
-  </table>
+
+  <h1 id="resume_title" style="">
+    <span class="email">
+      db0company@gmail.com
+    </span>
+    Deby Barbara Lepage
+  </h1>
+
+  <h3 id="skills" style="margin-bottom: 10px;">SKILLS</h3>
+
+  <div class="row-fluid">
+
+    <div class="span3">
+      <h5 id="management-skills">Management</h5>
+      <ul style="padding-left: 15px;">
+	<li>Get Things Done</li>
+	<li>Team Leadership</li>
+	<li>Project Management</li>
+	<li>Teaching, coaching</li>
+	<li>Public Speaking</li>
+	<li>Conferences & Talks</li>
+	<li>UI/UX Design</li>
+	<li>Analytics</li>
+	<li>Events Planning & Logistics</li>
+	<li>Budget Management</li>
+      </ul>
+    </div>
+
+    <div class="span6">
+      <h5 id="programming-languages">PROGRAMMING LANGUAGES & FRAMEWORKS</h5>
+      <p>
+	<b>Web</b><br>
+        <span class="bubble" title="★★★★☆">Python (Django)</span>,
+        <span class="bubble" title="★★★★☆">Javascript (Node.js, JQuery)</span>,
+	<span class="bubble" title="★★★★★">PHP5</span>,
+        <span class="bubble" title="★★★★★">HTML5</span>,
+        <span class="bubble" title="★★★★★">CSS3 (LESS, Bootstrap3)</span>,
+        <span class="bubble" title="★★★★★">OCaml (Ocsigen)</span>,
+        <span class="bubble" title="★★☆☆☆">Ruby (Rails)</span>
+      </p>
+      <p>
+	<b>Mobile</b><br>
+	<span class="bubble" title="★★☆☆☆">Swift (iOs),</span>
+	<span class="bubble" title="★☆☆☆☆">Ratchet (iOs/Android)</span>
+      </p>
+      <p style="margin-bottom: 0">
+	<b>Other</b><br>
+        <span class="bubble" title="★★★★★">API programming & consuming</span>,
+        <span class="bubble" title="★★★★☆">DB (MySQL, PostgreSQL, MongoDB)</span>,<br>
+        <span class="bubble" title="★★★★☆">C</span>,
+        <span class="bubble" title="★★★☆☆">C++</span>,
+        <span class="bubble" title="★★★☆☆">Perl</span>,
+        <span class="bubble" title="★☆☆☆☆">x86 ASM</span>
+      </p>
+      <!-- <p> -->
+      <!-- 	<b>Scripting, Markup</b><br> -->
+      <!-- 	Bash, Perl, PHP, Javascript, ASS, LaTeX, JSON, XML -->
+      <!-- </p> -->
+    </div>
+
+    <div class="span3">
+      <h5 id="software">SOFTWARE</h5>
+      <p>
+	<b>SCM</b><br>
+         Git (+ GitHub), SVN, Mercurial, Darcs
+	</p>
+      <p>
+	<b>System Administration</b><br>
+	Linux, Unix, Nagios, VirtualBox, Apache, Nginx
+      </p>
+    </div>
+  </div>
+
   <h3 id="professional-experiences">PROFESSIONAL EXPERIENCES</h3>
-  <ul>
-    <li>
-      <p>
-	<b>Online SAS</b>
-	<i>, July to December 2010 (6 month)</i>
-      </p>
-    <p>
-      <i>As a system and network administrater, my job consisted in setting up servers, </i>
-      <i>creating Perl scripts and setting up monitoring tools to supervise more than 250 administrative servers.</i>
-    </p>
-    <table>
-      <tr>
-	<td>
-	  <p>
-	    <b>Services</b>
-	    <br />
-	    Server hosting, VPS Cloud Hosting, Domain name registration</p>
-	</td>
-	<td>
-	  <p>
-	    <b>Information</b>
-	    <br />
-	    Also known as its old name “Dedibox”. Subsidary of “Iliad”.
-	    Same group as “Free”, a famous French ISP.</p>
-	</td>
-	<td>
-	  <p>
-	    <b>Internship subject</b>
-	    <br />
-	    Getting started with a set of administration tools and training for system and network administration.</p>
-	</td>
-      </tr>
-    </table>
-    </li>
+
+  <p>
+    <a class="proicon" href="http://life.tl/" target="_blank"><img src="img/resume/pro/life.png" alt="Life.tl"></a>
+    <b>Founder & CEO</b> at <a href="http://life.tl/" target="_blank"><b><i>Life.tl</i></b></a>
+    <small><i>, June 2013 - current</i></small><br>
+    <span>Team leadership, Communication, Market research, Development, Fundraising</span>
+  </p>
+
+  <p>
+    <a class="proicon" href="http://db0.fr/" target="_blank"><img src="img/resume/pro/glass.png" alt="Google Glass"></a>
+    <b>Google Glass Consultant</b>, <a href="http://db0.fr/" target="_blank"><b><i>freelance</i></b></a>
+    <small><i>, Sept 2013 - current</i></small><br>
+    <span>Help businesses integrate their product for Google Glass (demos, mockups, full development)</span>
+  </p>
+
+  <p>
+    <a class="proicon" href="http://androidreviewsmanager.com/" target="_blank"><img src="img/resume/pro/android.png" alt="Android Reviews Manager"></a>
+    <b>Lead Web developer</b> at <a href="http://androidreviewsmanager.com/" target="_blank"><b><i>ExploLab</i></b></a>
+    <small><i>, Dec 2013 - March 2014</i></small><br>
+    <span>Web development & design, Google Play API Consuming for a reviews tracker website</span>
+  </p>
+
+<!--  <p>
+    <a class="proicon" href="http://ocsigen.org/" target="_blank"><img src="img/resume/pro/ocsigen.png" alt="Ocsigen Web Framework"></a>
+    <b>Developer & Tech Writer</b> at <a href="http://ocsigen.org/" target="_blank"><b><i>CNRS/INRIA</i></b></a>
+    <small><i>, May - Sept 2012</i></small><br>
+    <span>OCaml, Ocsigen, code client/server widgets, write documentation</span>
+  </p> -->
+
+  <p>
+    <a class="proicon" href="http://return.epitech.eu/" target="_blank"><img src="img/resume/pro/return.png" alt="return (to_life);"></a>
+    <b>Founder & Manager</b> at <a href="http://return.epitech.eu/" target="_blank"><b><i>Epitech Students Dev lab</i></b></a>
+    <small><i>, Nov 2011 - Jun 2013</i></small><br>
+    <span>Web services, Web development, Manager of 12 developers + 24 volunteers</span>
+  </p>
+
+  <p>
+    <a class="proicon" href="http://koalab.epitech.eu/" target="_blank"><img src="img/resume/pro/koala.png" alt="Koala Epitech"></a>
+    <b>Administrative Assistant</b> at <a href="http://koalab.epitech.eu/" target="_blank"><b><i>Epitech Advanced Languages lab</i></b></a>
+    <small><i>, Jan - Oct 2012</i></small><br>
+    <span>Organize school events, write educational content, projects subjects, course material</span>
+  </p>
+
+  <p>
+    <a class="proicon" href="http://eip.epitech.eu/" target="_blank"><img src="img/resume/pro/eip.png" alt="Epitech Innovative Project"></a>
+    <b>Network Administrator & Software Engineer</b> at <a href="https://eip.epitech.eu/" target="_blank"><b><i>Epitech Innovation lab</i></b></a>
+    <small><i>, Jan - Aug 2011</i></small><br>
+    <span>Automate analysis and exploration of SCM and AFS, Perl, PHP, Shell</span>
+  </p>
+
+  <p style="margin-bottom: 0;">
+    <a class="proicon" href="http://epitech.eu/" target="_blank"><img src="img/resume/pro/epitech.png" alt="Epitech"></a>
+    <b>Teaching Assistant</b> at <a href="http://epitech.eu/" target="_blank"><b><i>Epitech</i></b></a>
+    <small><i>, Jan 2010 - Jun 2013</i></small><br>
+    <span>Help students improve their skills, answer their questions, grade their projects.</span>
+</p>
+  <ul style="margin: 0; margin-left: 50px">
+    <li> <b>Security Laboratory TA</b>: TAs leader, Software Security, Web Security</li>
+    <li><b>Programming Intro TA</b>: C Programming, Unix System, MySQL</li>
+    <li><b>Advanced Languages TA</b>: Objective Caml Programming, Functional programming</li>
   </ul>
-  <ul>
-    <li>
-      <p>
-	<b>Web development for Boiloris travelling agency</b>
-	<i>, November to March 2010 (5 month)</i>
+  <p>
+    <a class="proicon" href="http://www.degriffe-voyages.com/" target="_blank"><img src="img/resume/pro/boiloris.png" alt="Boiloris Voyages"></a>
+    <b>Web developer</b> at <a href="http://www.degriffe-voyages.com/" target="_blank"><b><i>Boiloris, Degriffe-voyages</i></b></a>
+    <small><i>, Nov 2010 - Mar 2011</i></small><br>
+    <span>Travelling Agency website development, book flights & hotels. PHP5, CSS3, MySQL, Smarty</span>
+  </p>
+
+  <p>
+    <a class="proicon" href="http://online.net/" target="_blank"><img src="img/resume/pro/online.png" alt="Online.net"></a>
+    <b>System & Network Administrator</b> at <a href="http://online.net/" target="_blank"><b><i>Online SAS</i></b></a>
+    <small><i>, Jul - Dec 2010</i></small><br>
+    <span>Deploy servers, Perl scripts, Perl GTK, monitoring, Nagios, IPMI</span>
+  </p>
+  <br>
+
+  <h3 id="open-source">OPEN-SOURCE CONTRIBUTIONS</h3>
+
+  <div class="row-fluid">
+    <div class="span6">
+      <p style="margin-top: 0">
+	<a class="proicon" href="http://ocsigen.org/" target="_blank"><img src="img/resume/pro/ocsigen.png" alt="Ocsigen"></a>
+	<b>Developer & Tech Writer</b> <i>May 2012 - Oct 2013</i><br>
+	<a href="http://ocsigen.org/"><b>Ocsigen</b></a> OCaml Web Server & Framework
       </p>
-    <p>
-      <i>Development of the official website of a travelling agency. Traveling descriptions, dates, pictures and </i>
-      <i>reservations online. PHP and CSS.</i>
-    </p>
-    </li>
-  </ul>
-  <ul>
-    <li>
-      <p>
-	<b>Epitech Innovative Projects Laboratory</b>
-	<i>, January to August 2011 (6 month)</i>
+    </div>
+    <div class="span6">
+      <p style="margin-top: 0">
+	<a class="proicon" href="http://ffmpeg.org/" target="_blank"><img src="img/resume/pro/ffmpeg.png" alt="FFmpeg"></a>
+	<b>Web Developer</b> <i>2014 - current</i><br>
+	<a href="http://ffmpeg.org/"><b>FFmpeg</b></a> Multimedia Framework & Software
       </p>
-    <p>
-      <i>Development of tools and scripts to get informations about students projects using SCM.</i>
-    </p>
-    </li>
-  </ul>
-  <ul>
-    <li>
-      <p>
-	<b>Teaching Assistant at EPITECH</b>
+    </div>
+  </div>
+
+  <h3 id="non-profit">NON-PROFIT ORGANIZATIONS</h3>
+
+  <div class="row-fluid">
+    <div class="span6">
+      <p style="margin-top: 0">
+	<b>Founder & Manager</b> at <a href="http://zerofansub.net/"><b><i>Subtitling Group</i></b></a> <small><i>2006 - 2010</i></small><br>
+	<span>Team of ~30 ppl, Online management</span>
       </p>
-    <p>
-      <i>As an teaching assistant, my job consists in helping students improve their skills, answering their questions and grading their projects.</i>
-    </p>
-    <table>
-      <tr>
-	<td style="width: 30%;">
-	  <b>Security Laboratory TA</b>
-	  <i> (2010-current)</i>
-	  <br />
-	  <ul>
-	    <li>Software Security</li>
-	    <li>Web Security</li>
-	  </ul>
-	  Leader of the WS TAs
-	</td>
-	<td style="width: 25%;">
-	  <b>Programming Intro TA</b>
-	  <i> (2011-current)</i>
-	  <br />
-	  <ul>
-	    <li>C Programming</li>
-	    <li>Unix System</li>
-	    <li>MySQL</li>
-	  </ul>
-	</td>
-	<td>
-	  <b>Advanced Languages TA</b>
-	  <i>(2011-current)</i>
-	  <br />
-	  <ul>
-	    <li>Objective Caml Programming</li>
-	    <li>Functional programming</li>
-	  </ul>
-	  <br />
-	  <p style="text-align: right;">
-	    Tutoring for 1st year students<br />
-	    Subtitling educational content
-	  </p>
-	</td>
-      </tr>
-    </table>
-    </li>
-  </ul>
-  <ul>
-    <li>
-      <p>
-	<b>Administrative Assistant</b>
-	<i>, January 2012 - current</i>
+    </div>
+    <div class="span6">
+      <p style="margin-top: 0">
+	<b>Founder, Director & Professor</b> at <a href="http://ecole.zerofansub.net/"><b><i>The Online School of Subtitling</i></b></a>
+	<small><i>2010 - 2011</i></small><br>
+	<span>Delivering certificates well known in the business</span>
       </p>
-    <p>
-      <i>Organize school events, update projects subjects and classes.</i>
-    </p>
-    </li>
-  </ul>
-  <ul>
-    <li>
-      <p>
-	<b>Project Manager in EPITECH</b>
-	<i>, since November 2011 (current)</i>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="span6">
+      <p style="margin-top: 0">
+	<b>President & Developer</b> at <a href="http://delegues.epitech.eu/"><b><i>Epitech Students Representatives</i></b></a> <small><i>2009 - 2013</i></small><br>
+	<span>Intranet, Events planning, ~600 ppl</span>
       </p>
-      <p>
-	<i>Founder and Manager of a laboratory which aims to develop and maintain a set of tools for students.</i>
+    </div>
+    <div class="span6">
+      <p style="margin-top: 0">
+	<b>President</b> of 2 <a href="http://epitech.eu/"><b><i>Students Organizations</i></b></a>
+	<small><i>2010 - 2012</i></small><br>
+	<span>Organize events, parties, week-ends, ~1500 ppl</span>
       </p>
-    <ul>
-      <li>Team of 38 people :<br />
-	<ul>
-	  <li>12 developers (PHP, MySQL, Ruby On Rails)</li>
-	  <li>24 members (writers, reporters, maintainers)</li>
-	</ul>
-      </li>
-      <li>
-	Current main projects :<br />
-	<ul>
-	  <li>Internal School Newspaper</li>
-	  <li>Webservice to get informations about users (students, teachers, etc.)</li>
-	</ul>
-    </li>
-    </ul>
-  </ul>
-  <ul>
-    <li>
+    </div>
+  </div>
+
+  <h3 id="education">EDUCATION</h3>
+
+  <div class="row-fluid">
+
+    <div class="span4">
+      <h5>Degrees</h5>
+
+<!--      <div class="details more" onClick="show('more_education'); return(false);">
+        more</div> -->
       <p>
-	<b>CNRS/INRIA Ocsigen team intern</b>
-	<i>, May - September 2012</i>
-      <p>
-	<i>Ocsigen is a powerful web server and framework in Ocaml</i>
-	<br />
-	Writing client / server widgets + documentation
+	EPITECH University (Paris, France)<br>
+	<b>Master in Computer Science</b> <small><i>- 2014</i></small></i><br>
+        Bachelor in Computer Science <small><i>- 2012</i></small>
       </p>
-    </li>
-  </ul>
-  <h3 id="educational-experiences">EDUCATIONAL EXPERIENCES</h3>
-  <table>
-    <tr>
-      <td>
-	<b>First year</b>
-	<ul>
-	  <li>Complete Shell in C</li>
-	  <li>Assembler (simple version with few<br />
-	    instructions) in C</li>
-	</ul>
-      </td>
-      <td>
-	<b>Second year</b>
-	<ul>
-	  <li>FTP/IRC/POP/SMTP Servers and Clients in C</li>
-	  <li>Snake game in C++</li>
-	  <li>Bomberman game 3D in C++</li>
-	</ul>
-      </td>
-      <td>
-	<b>Third year</b>
-	<ul>
-	  <li>R-Type game in C++</li>
-	  <li>VOIP Server/Client in C++</li>
-	  <li>C Object Wrapper Compiler in CodeWorker</li>
-	  <li>HTTP server in C++</li>
-	  <li>Collaborating text editor in Ocsigen (OCaml) with INRIA</li>
-	</ul>
-      </td>
-    <tr>
-      <td colspan="3">
-	<b>Epitech innovative Project</b>
-	<br />
-	Team leader of 10 students. Scalable website for social networking and a entertainment.<br />
-      </td>
-    </tr>
-  </table>
-  <h3 id="personnal-expreriences">PERSONNAL EXPERIENCES</h3>
-  <ul>
-    <li>
-      <p>
-	<b>Volonteer Subtitling Group</b>
-	<i> (2006–2010)</i>
-	<br />
-	Founder and manager of a remote constantly changing team of ~20 people.</p>
-    </li>
-    <li>
-      <p>
-	<b>The School of Subtitling</b>
-	<i> (2010–2011)</i>
-	<br />
-	Founder, director and teacher of the online school of subtitling with students, teachers, lessons,
-	school report and diploma recognized by most of the French subtitling groups.
-      </p>
-    </li>
-    <li>
-      <p>
-	<b>EPITECH Students representatives</b>
-	<i> (2009-current)</i>
-	<br />
-	Leader of the team of representatives. <!--Opened a dialogue with between promotions and schools.-->
-	Developper of an Intranet for ~3000 students (contact representatives, track issues, write and generate reports, ...).<br />
-	Events organizer: Year Group Photo (~600 ppl), Conferences (~50 ppl), and more.</p>
-    </li>
-    <li>
-      <p>
-	<b>President of a student organization</b>
-	<i> (2010-2012)</i>
-	<br />
-	Organization of several events (week-ends, parties, ~100 ppl) around beer culture. Biggest event: 500 ppl.</p>
-    </li>
-    <li>
-      <p>
-	<b>Founder and President of a student organization “Don’t Panic!”</b>
-	<i> (2010-2012)</i>
-	<br />
-	Provide useful products for sale to students for intensive study periods
-	and organize activities and events around Anglo-Saxon culture.
-	Hosted the French Towel Day (worldwide event), 300 ppl.
-      </p>
-    </li>
-    <li>
-      <p>
-	<b>BiblioTECH</b>
-	<i> (2010)</i>
-	<br />
-	Developer of the book-sharing website for students of Epitech.</p>
-    </li>
-  </ul>
+<!--      <div class="dview" id="more_education">
+        <ul>
+          <li>
+            <div class="details" onClick="show('bac'); return(false);">
+              details</div>
+            <p>
+              Scientific “Baccalaur&eacute;at”,<br>
+              Mathematics option <small><i>- 2009</i></small></p>
+            <div class="dview" id="bac" style="width: 200px;">
+              <ul>
+                <li>
+                  <b>High School:</b>
+                  <br>
+                  <a href="http://www.ac-nice.fr/apollinaire/" target="_blank">
+                    Guillaume Apollinaire</a>,
+                  <a href="http://goo.gl/maps/YIVH">
+                    Nice, France</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            “Brevet des coll&egrave;ge”, Mention “Bien” <small><i>- 2006</i></small><br>
+            College: <a href="http://www.ac-nice.fr/jhfabre/" target="_blank">
+              Jean-Henri Fabre</a>,
+            <a href="http://goo.gl/maps/32D8" target="_blank">
+              Nice</a>
+          </li>
+        </ul>
+      </div> -->
+      <h5>Main Education fields</h5>
+      <ul style="padding-left: 15px;">
+        <li>Computer Science, Software Engineering, Programming</li>
+        <li>Management, Leadership</li>
+        <li>Business, Marketing, Communication, Strategy</li>
+      </ul>
+    </div>
+
+    <div class="span8">
+      <div style="padding-right: 10px;">
+
+        <h5>Attended schools</h5>
+
+<!--        <div class="details" onClick="show('epitech'); return(false);">
+          details
+        </div> -->
+        <p>
+          <b>EPITECH</b>, European Institute Of Technology <small><i>- 2009 - 2014</i></small>
+        </p>
+<!--        <div class="dview" id="epitech">
+          <a href="http://epitech.eu/" target="_blank">
+            <img src="img/resume/logo_epitech.png" alt="Epitech" />
+          </a><br>
+          EPITECH, the European Institute of Technology, is a private institution of
+          higher education in general computer science.<br>
+          <a href="http://epitech.db0.fr/" target="_blank">
+            My work at school</a>
+        </div> -->
+
+<!--        <div class="details" onClick="show('csulb'); return(false);">
+          details
+        </div> -->
+        <p>
+          <b>California State University Long Beach</b>,
+          Spring semester <small><i>- 2013</i></small>
+        </p>
+<!--        <div class="dview" id="csulb">
+          <a href="http://csulb.edu/" target="_blank">
+            <img src="img/resume/logo_csulb.png" alt="CSULB" />
+          </a><br>
+          CSULB is the second largest campus of the California State University (CSU)
+          and one of the largest in the state of California.
+        </div> -->
+
+<!--        <div class="details" onClick="show('ucberkeley'); return(false);">
+          details
+        </div> -->
+        <p>
+          <b>Berkeley University Of California</b>,
+          Summer Session <small><i>- 2013</i></small>
+        </p>
+<!--        <div class="dview" id="ucberkeley">
+          <a href="http://berkeley.edu/" target="_blank">
+            <img src="img/resume/logo_berkeley.png" alt="BERKELEY" />
+          </a><br>
+          UC Berkeley is the oldest of the ten major campuses affiliated with the University of California.
+        </div> -->
+
+<!--        <div class="details" onClick="show('escp'); return(false);">
+          details
+        </div> -->
+        <p>
+          <b>Paris-Factory (ESCP Europe)</b>,
+          Entrepreneurship program <small><i>- 2013</i></small>
+        </p>
+<!--        <div class="dview" id="escp">
+          <a href="http://paris-factory.eu/" target="_blank">
+            <img src="img/resume/paris-factory.png" alt="Paris-Factory" />
+          </a><br>
+          10 weeks intensive Entrepreneurship program by CHAIRE Entreprenariat
+          at ESCP Europe.
+          <br>
+          <a href="http://www.chaireeee.eu/" target="_blank">
+            <img src="img/resume/chaire.png" alt="Chaire ESCP Europe" />
+          </a>
+        </div> -->
+
+      </div>
+
+  <h5>School projects <span style="font-style: italic; text-transform: none; font-weight: 300;">- sources on demand</span></h5>
+  <p style="margin-bottom: 0">
+    <b>C</b>: Shell, Assembler, FTP/IRC/POP/SMTP Servers and Clients<br>
+    <b>C++</b>: Snake, Bomberman 3D, R-Type Online, VOIP Server/Client, HTTP Server<br>
+    <b>Various</b>: C Object Wrapper Compiler (CodeWorker), Online Collaborative text editor (OCaml)
+  </p>
+
+
+    </div>
+
+   </div>
+
+<h3 id="awards">AWARDS</h3>
+<ul style="margin: 0; padding-left: 15px;">
+  <li><a href="http://goo.gl/KPMHWO"><b><i>Imagine Cup</i></b></a> StartUp Competiton, 2nd prize</li>
+  <li><a href="http://goo.gl/GsyO4e"><b><i>Epitech Innovative Project</i></b></a> Jury's special favorite prize</li>
+</ul>
+
+<br><br>
+
+  <div class="tright buttonwrap">
+    <a href="resume.pdf" target="_blank">
+      <div class="button">
+	➜ Download PDF
+      </div>
+    </a>
+    <a href="http://github.db0.fr/" target="_blank">
+      <div class="button">
+	➜ Browse my open-source projects on GitHub
+	<img src="http://icons.db0.fr/g/github.png" class="icon" style="padding-left: 15px;" alt="GitHub">
+      </div>
+    </a>
+  </div>
+
 </div>

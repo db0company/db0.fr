@@ -1,5 +1,7 @@
 
 $(document).ready(function() {
+	$("#contact").hide();
+	$("#contact").prev().hide();
 	$("#object").change(function() {
 		$("#otherobject").hide();
 		$("#hiddenmeeting").hide();
@@ -14,12 +16,13 @@ function setMaps() {
     $(".addresses .well").each(function() {
 	    var id = $(this).attr('id');
 	    var address = $("#" + id + " .address").text();
+	    var zoom = $("#" + id + " .map .zoom").text();
 	    var lat = $("#" + id + " .map .lat").text();
 	    var long = $("#" + id + " .map .long").text();
 	    var latlong = new google.maps.LatLng(lat, long);
 	    var mapOptions = {
 		center: latlong,
-		zoom: 10,
+		zoom: parseInt(zoom, 10),
 		disableDefaultUI: true,
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 	    };

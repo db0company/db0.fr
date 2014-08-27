@@ -1,9 +1,3 @@
-
-<h3><img src="http://icons.db0.fr/g/pen.png" class="icon" alt="Contact ico">
-  Send a message</h3>
-
-<form method="post" id="contact" >
-
 <?php
    $objects = array('Say hi!',
 		    'Hire me',
@@ -14,6 +8,43 @@
 		    'meet' => 'Organize a meeting',
 		    'other' => 'Other',
 		    );
+
+include_once('Mail.php');
+
+function protect($string) {
+  return (htmlspecialchars(stripslashes($string)));
+}
+
+if (isset($_POST['submit'])) {
+  $headers['From']    = 'db0fr@db0.fr';
+  $headers['To']      = 'db0company@gmail.com';
+  if ($_POST['object'] == 'other')
+    $object = protect($_POST['otherobject']);
+  elseif ($_POST['object'] == 'meet')
+    $object = $objects['meet'];
+  else
+    $object = $objects[intval($_POST['object'])];
+  $headers['Subject'] = '[db0.fr] '.$object;
+  $content = utf8_encode('From '.protect($_POST['email'])."<br>".protect($message));
+  $headers['Content-Type'] = "text/html; charset=\"UTF-8\"";
+  $headers['Content-Transfer-Encoding'] = "8bit";
+
+  $params['sendmail_path'] = '/usr/lib/sendmail';
+
+  $mail_object =& Mail::factory('sendmail', $params);
+
+  $mail_object->send($to, $headers, $content);
+  ?>
+    <div class="alert-success">Message successfully sent. Thank you!</div>
+    <?
+ }
+?>
+<h3><img src="http://icons.db0.fr/g/pen.png" class="icon" alt="Contact ico">
+  Send a message</h3>
+
+<form method="post" id="contact" >
+
+<?php
 
 $objectcontrol = '
 <select name="object" id="object">
@@ -85,63 +116,10 @@ foreach ($controls as $t => $c) { ?>
   Instant messaging</h3>
 
 <?php
-
-$chat = array(array('icon' => 'hangout',
-                    'name' => 'Google Hangout',
-                    'url' => 'http://www.google.com/hangout',
-		    'info' => 'zero.fansub@gmail.com',
-		    'details' => 'replaces GTalk'),
-	      array('icon' => 'gmail',
-                    'name' => 'GMail',
-                    'url' => 'http://mail.google.com/',
-		    'info' => 'db0company@gmail.com',
-		    'details' => ''),
-	      array('icon' => 'sms',
-                    'name' => 'Text messaging (USA)',
-                    'url' => '',
-		    'info' => '+1-(562)-394-6443',
-		    'details' => ''),
-	      array('icon' => 'sms',
-                    'name' => 'Text messaging (France)',
-                    'url' => '',
-		    'info' => '+33.6.89.39.02.54',
-		    'details' => ''),
-	      array('icon' => 'line',
-                    'name' => 'LINE messenger',
-                    'url' => 'http://line.naver.jp/en/',
-		    'info' => 'db0company',
-		    'details' => 'Japanese messenger'),
-	      array('icon' => 'kakaotalk',
-                    'name' => 'Kakao TALK',
-                    'url' => 'http://www.kakao.com/talk/en',
-		    'info' => 'db0company',
-		    'details' => 'Korean messenger'),
-	      array('icon' => 'qq',
-                    'name' => 'QQ',
-                    'url' => 'http://www.imqq.com/',
-		    'info' => '2230577113',
-		    'details' => 'Chinese messenger'),
-	      array('icon' => 'facebookmessenger',
-                    'name' => 'Facebook Messenger',
-                    'url' => 'http://facebook.com/db0company',
-		    'info' => 'db0company',
-		    'details' => ''),
-	      array('icon' => 'skype',
-                    'name' => 'Skype',
-                    'url' => 'www.skype.com',
-		    'info' => 'db0true',
-		    'details' => ''),
-	      array('icon' => 'whatsapp',
-                    'name' => 'WhatsApp',
-                    'url' => 'http://www.whatsapp.com',
-	      	    'info' => '+1-(562)-394-6443',
-	      	    'details' => ''),
-	      // array('icon' => '',
-              //       'name' => '',
-              //       'url' => '',
-	      // 	    'info' => '',
-	      // 	    'details' => ''),
-	      );
+include_once('../include/external.php');
+$chat = array_filter($ext, function($link) {
+    return $link['type'] == 'im-only' || $link['type'] == 'im';
+  });
 
 function	makeMessengerBox($c) {
 ?>
@@ -151,7 +129,7 @@ function	makeMessengerBox($c) {
 	<div class="well messenger <?php if (!empty($c['url'])) { ?>well-link<?php } ?>">
 	  <div class="row-fluid">
 	    <div class="span3">
-	      <img src="http://icons.db0.fr/s/<?= $c['icon'] ?>_200.png" alt="<?= $c['name'] ?>">
+	      <img src="http://icons.db0.fr/s/<?= $c['icon'] ?>.png" alt="<?= $c['name'] ?>">
 	    </div> <!-- span -->
 	    <div class="span9">
 	      <h5><?= $c['name'] ?></h5>
@@ -176,17 +154,19 @@ function	makeMessengerBox($c) {
 
 <?php
   $adresses = array(array('id' => 'USA-sf',
-			  'address' => '1111A Dolores Street<br>San Francisco, CA 94110',
+			  'address' => '601 Van Ness Ave<br>Unit #607<br>San Francisco, CA 94110',
 			  'country' => 'USA',
 			  'flag' => 'usa',
-			  'lat' => '37.7577',
-			  'long' => '-122.4376'),
+			  'lat' => 37.763457,
+			  'long' => -122.417136,
+			  'zoom' => 11),
 		    array('id' => 'FR-pr',
 			  'address' => '363 Route Stratégique du Mont Macaron<br>06730 St André de la Roche',
 			  'country' => 'France',
 			  'flag' => 'french',
 			  'lat' => 43.755602,
-			  'long' => 7.289803),
+			  'long' => 7.289803,
+			  'zoom' => 10),
 		    );
 
 function	makeAddress($a) {
@@ -197,6 +177,7 @@ function	makeAddress($a) {
 	  <div class="map" id="<?= $a['id'] ?>map">
 	    <span class="lat hidden"><?= $a['lat'] ?></span>
 	    <span class="long hidden"><?= $a['long'] ?></span>
+	    <span class="zoom hidden"><?= $a['zoom'] ?></span>
 	  </div> <!-- map -->
 	</div> <!-- span -->
 	<div class="span5">

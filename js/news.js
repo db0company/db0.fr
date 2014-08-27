@@ -41,14 +41,15 @@ function	domToObj(a) {
 
 var tester = 0;
 
-function	getNews(feed, setloader, callback, total) {
+function	getNews(feed, useloader, callback, total, format, afterallnews) {
     if (typeof(useloader) == 'undefined') { useloader = true; }
+    if (typeof(format) == 'undefined') { format = 'html'; }
 
     if (useloader)
 	$("#loading").show();
     jQuery.get('rss',
 	       { feed: feed,
-		 type: 'html' },
+		 type: format },
 	       function(data) {
 		   $("#latest_news").append(data);
 		   if (typeof(callback) != 'undefined')
@@ -65,6 +66,8 @@ function	getNews(feed, setloader, callback, total) {
 			   $("#refresher").show();
 			   $("#loading").hide();
 			   tester = 0;
+			   if (typeof(afterallnews) != 'undefined')			   
+			       afterallnews();
 		       }
 		   } else {
 		       if (useloader)

@@ -1,0 +1,42 @@
+
+nav.tabs,
+#main > .row-fluid > .span4,
+footer,
+#resume .details,
+#resume .button
+{
+    display: none;
+}
+
+body {
+    background: white;
+}
+
+#main {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+#main > .row-fluid > .span8 {
+    width: 100%;
+    margin: 0;
+}
+
+#content {
+    margin: 0;
+    padding: 10px;
+    font-size: 14px;
+}
+
+#resume #resume_title {
+    display: block;
+}
+
+#resume:after {
+    display: block;
+    content: "Get the latest interactive version of this résumé and more information on http://db0.fr/";
+    margin-top: 20px;
+    font-style: italic;
+}

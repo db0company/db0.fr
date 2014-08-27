@@ -26,16 +26,17 @@ function getLinkPic($pic) {
 }
 
 function makeGrid($per_line, $elements, $displayer) {
+  $row_nb = 0;
 ?>
-  <div class="row-fluid">
+  <div class="row-fluid row<?= $row_nb ?>">
     <?php $i = 1;
 	  foreach ($elements as $e) { ?>
     <div class="span<?= 12 / $per_line ?>">
       <?php $displayer($e) ?>
     </div> <!-- span -->
-    <?php if ($i == $per_line) { ?>
+<?php if ($i == $per_line) { $row_nb++; ?>
   </div> <!-- row -->
-  <div class="row-fluid">
+  <div class="row-fluid row<?= $row_nb ?>">
     <?php $i = 0;
 	  }
 	  $i++;
@@ -43,4 +44,3 @@ function makeGrid($per_line, $elements, $displayer) {
   </div> <!-- row -->
 <?php
 }
-

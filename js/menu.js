@@ -1,9 +1,9 @@
 
 $(document).ready(function() {
-	$("#morelinks .button").click(function(event) {
+	$("#morelinks .button.more").click(function(event) {
 		event.preventDefault();
 		$("#quicklinks .morelinks").show('slow');
-		$("#morelinks").hide('slow');
+		$("#morelinks .button.more").hide('slow');
 	    });
 	if ($(".tabs ul").width() < (670)) {
 	    $(".tabs .inactive span").hide();

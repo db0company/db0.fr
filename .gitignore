@@ -1,5 +1,6 @@
 feedwriter/
 js/jquery.min.js
+rss/cache/*
 less.js
 *~
 #*#
